@@ -179,3 +179,6 @@ endif
 include vendor/bootleggers/config/btlg_main.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
+
+# include definitions for SDCLANG
+include vendor/aosp/sdclang/sdclang.mk
