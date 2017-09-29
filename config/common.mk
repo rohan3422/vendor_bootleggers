@@ -176,6 +176,13 @@ include vendor/bootleggers/config/caf_fw.mk
 endif
 endif
 
+# Include SDCLANG definitions if it is requested and available
+ifeq ($(HOST_OS),linux)
+    ifneq ($(wildcard vendor/qcom/sdclang-4.0/),)
+        include vendor/aosp/sdclang/sdclang.mk
+    endif
+endif
+
 include vendor/bootleggers/config/btlg_main.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
