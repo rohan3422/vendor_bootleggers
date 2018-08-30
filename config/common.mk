@@ -32,7 +32,6 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/bootleggers/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/bootleggers/prebuilt/common/bin/50-bootleggers.sh:system/addon.d/50-bootleggers.sh \
-    vendor/bootleggers/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
     vendor/bootleggers/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 ifeq ($(AB_OTA_UPDATER),true)
@@ -44,7 +43,10 @@ endif
 
 # priv-app whitelist
 PRODUCT_COPY_FILES += \
-    vendor/bootleggers/prebuilt/common/etc/permissions/privapp-permissions-bootleg.xml:system/etc/permissions/privapp-permissions-bootleg.xml
+    vendor/bootleggers/prebuilt/common/etc/permissions/privapp-permissions-bootleg.xml:system/etc/permissions/privapp-permissions-bootleg.xml \
+    vendor/bootleggers/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml \
+    vendor/bootleggers/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml \
+    vendor/bootleggers/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
