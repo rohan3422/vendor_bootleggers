@@ -11,7 +11,8 @@ PRODUCT_PACKAGES += \
     Jelly \
     MusicPlayer \
     bootanimation.zip \
-    WeatherClient
+    WeatherClient \
+    ShishuOTA
 
 ifneq ($(TARGET_USE_SINGLE_BOOTANIMATION),true)
     PRODUCT_PACKAGES += \
