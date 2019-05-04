@@ -32,6 +32,7 @@ PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/bootleggers/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/bootleggers/prebuilt/common/bin/50-bootleggers.sh:system/addon.d/50-bootleggers.sh \
+    vendor/bootleggers/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
     vendor/bootleggers/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 ifeq ($(AB_OTA_UPDATER),true)
