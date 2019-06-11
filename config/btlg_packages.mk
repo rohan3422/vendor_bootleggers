@@ -10,6 +10,7 @@ PRODUCT_PACKAGES += \
     GboardGoPreb \
     Jelly \
     Phonograph \
+    SubstratumSignature \
     WeatherClient \
     OmniStyle
 
