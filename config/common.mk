@@ -57,10 +57,6 @@ PRODUCT_COPY_FILES += \
 $(foreach f,$(wildcard vendor/bootleggers/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
-# Copy over added mimetype supported in libcore.net.MimeUtils
-PRODUCT_PACKAGES += \
-    SubstratumSignature
-
 PRODUCT_COPY_FILES += \
     vendor/bootleggers/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
 
@@ -145,8 +141,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
 
-
-
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
@@ -179,6 +173,3 @@ endif
 include vendor/bootleggers/config/btlg_main.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
-
-# include definitions for SDCLANG
-include vendor/bootleggers/sdclang/sdclang.mk
